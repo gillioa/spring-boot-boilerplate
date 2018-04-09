@@ -28,8 +28,8 @@ then
 	cd api-gateway && mvn package -DskipTests && cd .. && cd discovery-service && mvn package -DskipTests && cd .. && cd config-service && mvn package -DskipTests && cd .. && docker-compose build && docker-compose up
 elif [ "$1" == $TOKEN_CLEAN ]
 then
-	docker rm discovery-service api-gateway watson-service config-service
-	docker rmi discovery-service:latest api-gateway:latest watson-service:latest config-service:latest
+	docker rm discovery-service api-gateway config-service
+	docker rmi discovery-service:latest api-gateway:latest config-service:latest
 elif [ "$1" == $TOKEN_COMPILE_ONLY ]
 then
 	cd api-gateway && mvn package -DskipTests && cd .. && cd discovery-service && mvn package -DskipTests && cd .. && cd config-service && mvn package -DskipTests && cd ..
