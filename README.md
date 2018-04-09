@@ -1,1 +1,1 @@
-# spring-boot-boilerplate
+# spring-boot-microservices-boilerplate
