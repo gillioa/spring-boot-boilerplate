@@ -1,4 +1,4 @@
-package com.prudential.prutopia.apigateway;
+package com.springboot.boilerplate.apigateway;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

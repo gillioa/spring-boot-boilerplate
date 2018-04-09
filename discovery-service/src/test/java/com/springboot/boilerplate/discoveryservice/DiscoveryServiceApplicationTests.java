@@ -1,4 +1,4 @@
-package com.prudential.prutopia.discoveryservice;
+package com.springboot.boilerplate.discoveryservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

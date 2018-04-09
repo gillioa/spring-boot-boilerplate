@@ -1,4 +1,4 @@
-package com.prudential.prutopia.apigateway;
+package com.springboot.boilerplate.apigateway;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

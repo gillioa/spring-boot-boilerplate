@@ -1,4 +1,4 @@
-package com.prudential.prutopia.apigateway;
+package com.springboot.boilerplate.apigateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
