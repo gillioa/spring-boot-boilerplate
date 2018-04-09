@@ -1,0 +1,43 @@
+version: '3'
+services:
+  discovery-service:
+    build: ./discovery-service/
+    image: discovery-service:latest
+    ports:
+      - "8761:8761"
+    depends_on:
+      - config-service
+    container_name: discovery-service
+    networks:
+      - backend
+    environment:
+      - SPRING_PROFILES_ACTIVE
+
+  api-gateway:
+    build: ./api-gateway/
+    image: api-gateway:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - config-service
+      - discovery-service
+    container_name: api-gateway
+    networks:
+      - backend
+    environment:
+      - SPRING_PROFILES_ACTIVE
+
+  config-service:
+    build: ./config-service/
+    image: config-service:latest
+    ports:
+      - "8888:8888"
+    container_name: config-service
+    networks:
+      - backend
+    environment:
+      - SPRING_PROFILES_ACTIVE
+
+networks:
+  backend:
+    driver: bridge
